@@ -1,6 +1,7 @@
 from flask import Flask, render_template
-from .extensions import db, bcrypt, login_manager
+from .extensions import db, bcrypt, login_manager, migrate
 from anoopdev.auth.models import User
+
 
 
 @login_manager.user_loader
@@ -15,6 +16,8 @@ def create_app():
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = 0
 
     db.init_app(app)
+    migrate.init_app(app, db)
+
     login_manager.init_app(app)
     login_manager.login_view = "auth.login"
     login_manager.login_message_category = "info"
