@@ -1,0 +1,29 @@
+{
+  "name": "anoopdevflask",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "postcss anoopdev/static/css/main.css -o anoopdev/static/css/main.min.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anoopksharma22/anoopdev_v2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anoopksharma22/anoopdev_v2/issues"
+  },
+  "homepage": "https://github.com/anoopksharma22/anoopdev_v2#readme",
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.1",
+    "autoprefixer": "^10.4.7",
+    "postcss": "^8.4.13",
+    "tailwindcss": "^3.0.24"
+  },
+  "dependencies": {
+    "postcss-cli": "^9.1.0"
+  }
+}
